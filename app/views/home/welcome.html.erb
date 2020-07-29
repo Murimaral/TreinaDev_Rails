@@ -1,0 +1,8 @@
+<h1>bem vindo ao meu blog!</h1>
+<h3>Eis sua lista de tarefas: </h3>
+<% @tasks.each do|task| %>
+  <%= task.description %>
+<% end %>
+
+
+<em>Criada em <%= Date.today %></em> 
