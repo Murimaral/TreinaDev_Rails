@@ -2,6 +2,8 @@
 <h3>Eis sua lista de tarefas: </h3>
 <% @tasks.each do|task| %>
   <%= task.description %>
+  <%= link_to 'Editar', edit_task_path(task) %>
+  <%= link_to 'Apagar', task_path(task), method: :delete, data: { confirm: 'Quer apagar essa tarefa?' } %>
 <% end %>
 
 
